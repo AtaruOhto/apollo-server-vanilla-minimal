@@ -9,11 +9,38 @@ Minimal example of Apollo Server with vanilla JavaScript.
 * SQLite3 (Database)
 
 
-## How to start
+## Bootstrap
 
 ```
 npm install
 npm run db:migrate
 npm run db:seed
 npm run start
+```
+
+Access GraphiQL.
+
+```
+access http://localhost:4000
+```
+
+### Query
+
+```
+{
+  users {
+    id
+    name
+  } 
+}
+```
+
+### Mutation
+
+```
+mutation createUserTest {
+  User: createUser(name: "hello") {
+    id
+  }
+}
 ```
