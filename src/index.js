@@ -9,6 +9,12 @@ const boot = async () => {
   const store = await getDB();
 
   const server = new ApolloServer({
+    cors: { 
+      cors: {
+        origin: '*',
+        credentials: true,
+      }
+    },
     typeDefs,
     resolvers,
     dataSources: () => ({
@@ -22,3 +28,4 @@ const boot = async () => {
 }
 
 boot();
+
