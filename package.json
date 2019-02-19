@@ -5,7 +5,6 @@
     "apollo-datasource": "^0.3.1",
     "apollo-server": "^2.4.2",
     "graphql": "^14.1.1",
-    "nodemon": "^1.18.10",
     "sequelize": "^4.42.0",
     "sqlite3": "^4.0.6"
   },
@@ -13,7 +12,7 @@
   "main": "src/index.js",
   "private": true,
   "scripts": {
-    "start": "nodemon src/index.js localhost 4000",
+    "start": "node src/index.js localhost 4000",
     "db:migrate": "db-migrate up",
     "db:seed": "node src/db/scripts/seeds.js"
   },
